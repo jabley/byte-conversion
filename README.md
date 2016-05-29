@@ -1,6 +1,6 @@
 JMH Benchmark around cost of byte->char conversion.
 
-I discovered some code that was reading an `InputStream` to a StringBuilder (byte->char conversion), then back to bytes, then back to chars.
+I discovered some code that was reading an `InputStream` to a `StringBuilder` (byte->char conversion), then back to bytes `StringBuilder#toString#getBytes`, then back to chars.
 
 This seemed quite inefficient.
 
